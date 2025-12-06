@@ -1,4 +1,7 @@
 import nx from '@nx/eslint-plugin';
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
 
 export default [
   ...nx.configs['flat/base'],
@@ -40,3 +43,4 @@ export default [
     rules: {},
   },
 ];
+
